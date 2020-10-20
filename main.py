@@ -1,9 +1,7 @@
 # main.py
 import os
 from Cogs.RandomCommands import RandomCommands
-import discord
 from discord.ext import commands
-import random
 from dotenv import load_dotenv
 from Cogs.Greetings import Greetings
 
