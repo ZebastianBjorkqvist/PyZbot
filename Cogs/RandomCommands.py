@@ -29,7 +29,7 @@ class RandomCommands(commands.Cog):
 
     @commands.command()
     async def dog(self, ctx):
-        """Sends a almost as beautiful image"""  # This adds the text to the $help command
+        """Sends an almost as beautiful image"""  # This adds the text to the $help command
         url = "https://dog.ceo/api/breeds/image/random"
         json_response = urlopen(url)
         data = json.loads(json_response.read())
