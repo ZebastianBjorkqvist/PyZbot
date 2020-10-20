@@ -29,6 +29,7 @@ class RandomCommands(commands.Cog):
 
     @commands.command()
     async def dog(self, ctx):
+        """Sends a almost as beautiful image"""  # This adds the text to the $help command
         url = "https://dog.ceo/api/breeds/image/random"
         json_response = urlopen(url)
         data = json.loads(json_response.read())
@@ -37,4 +38,5 @@ class RandomCommands(commands.Cog):
 
     @commands.command()
     async def piggy(self, ctx):
+        """Sends a beautiful image"""  # This adds the text to the $help command
         await ctx.send(await self.get_piggie_image())
