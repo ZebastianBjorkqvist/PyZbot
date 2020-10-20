@@ -40,3 +40,11 @@ class RandomCommands(commands.Cog):
     async def piggy(self, ctx):
         """Sends a beautiful image"""  # This adds the text to the $help command
         await ctx.send(await self.get_piggie_image())
+
+    @commands.command(help='Simulates rolling dice. $roll_dice {number of dice} {number of sides}')
+    async def roll_dice(self, ctx, number_of_dice: int, number_of_sides: int):
+        dice = [
+            str(random.choice(range(1, number_of_sides + 1)))
+            for _ in range(number_of_dice)
+        ]
+        await ctx.send(', '.join(dice))

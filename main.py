@@ -19,15 +19,6 @@ async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
 
 
-@bot.command(help='Simulates rolling dice. $roll_dice {number of dice} {number of sides}')
-async def roll_dice(ctx, number_of_dice: int, number_of_sides: int):
-    dice = [
-        str(random.choice(range(1, number_of_sides + 1)))
-        for _ in range(number_of_dice)
-    ]
-    await ctx.send(', '.join(dice))
-
-
 bot.add_cog(Greetings(bot))
 bot.add_cog(RandomCommands(bot))
 
