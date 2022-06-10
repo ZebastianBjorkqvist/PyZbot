@@ -5,6 +5,8 @@ from discord.ext import commands
 from dotenv import load_dotenv
 from Cogs.Greetings import Greetings
 from Cogs.RandomCommands import RandomCommands
+from Cogs.Pokemon import PokemonCommands
+
 import logging
 
 load_dotenv()
@@ -20,7 +22,7 @@ async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
 
 
-
 bot.add_cog(Greetings(bot))
 bot.add_cog(RandomCommands(bot))
+bot.add_cog(PokemonCommands(bot))
 bot.run(TOKEN)
