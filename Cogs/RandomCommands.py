@@ -51,7 +51,7 @@ class RandomCommands(commands.Cog):
 
     @commands.command()
     async def guess(self, ctx, number: int):
-        """ Guess a random number from 1 to 6. """
+        """ Guess a random number from 1 to 6. """ # Text for !help command
 
         value = random.randint(1, 6)
 
