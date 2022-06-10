@@ -1,4 +1,3 @@
 # PyZbot
 
-A version of my ZBot but written in python.
-They dont have the exact same functionality 
+A bot for my discord server written in python.
