@@ -55,8 +55,13 @@ class PokemonCommands(commands.Cog):
 
         embed_var.set_thumbnail(url=sprite_url)
 
-        embed_var.add_field(name="Types",
-                            value=pokemon_types,
-                            inline=False)
+        if ',' in pokemon_types:            # if there is a ',' in pokemon_types there are several types so use "types"
+            embed_var.add_field(name="Types",
+                                value=pokemon_types,
+                                inline=False)
+        else:
+            embed_var.add_field(name="Type",
+                                value=pokemon_types,
+                                inline=False)
 
         await ctx.send(embed=embed_var)
